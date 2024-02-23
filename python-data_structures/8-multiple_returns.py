@@ -1,22 +1,15 @@
 #!/usr/bin/python3
-# -----------------------------------------------------------
-# Python program that:
-# demonstrates how to return a tuple with the length of a string
-# and its first character
-#
-# (C) 2022 Igbinijesu Samuel, Lagos, Nigeria
-# email igbinijesusamuel@gmail.com
-# -----------------------------------------------------------
-
-
 def multiple_returns(sentence):
-    """
+    """calculate length of stence and first character
+
     Args:
-        sentence: a string argument
+        sentence: the sentence
 
     Returns:
-        a tuple with the length of a string and its first character
+        return a (length, first-char)
     """
-
-    str_len, first_char = len(sentence), sentence[0]
-    return (str_len, first_char)
+    if len(sentence) == 0:
+        result = 0, None
+    else:
+        result = len(sentence), sentence[0]
+    return (result)
