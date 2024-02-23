@@ -1,31 +1,21 @@
 #!/usr/bin/python3
-# -----------------------------------------------------------
-# Python program that:
-# demonstrates how to replace an element in a list at a specific position
-# without modifying the original list (like in C)
-#
-# (C) 2022 Igbinijesu Samuel, Lagos, Nigeria
-# email igbinijesusamuel@gmail.com
-# -----------------------------------------------------------
-
-
-def new_in_list(my_list, idx, element):
-    """Replace an element in a list at a specific location
-      without modifying the original
+def print_reversed_list_integer(my_list=[]):
+    """Print list in reverse order
 
     Args:
-        my_list: a list
-        idx: the index of item to replace
-        element: item to be substituted
+        my_list: the list to reverse
 
     Returns:
-        the edited list copy
+        Null
     """
-
-    temp_list = my_list.copy()
-    if idx < 0:
-        return temp_list
-    if idx >= len(my_list):
-        return temp_list
-    temp_list[idx] = element
-    return temp_list
+    if my_list is None:
+        return ('')
+    if len(my_list) == 0:
+        return ('')
+    for i in range(int(len(my_list) / 2)):
+        ldx = len(my_list) - i - 1
+        elem = my_list[ldx]
+        my_list[ldx] = my_list[i]
+        my_list[i] = elem
+    for i in my_list:
+        print("{:d}".format(i))
